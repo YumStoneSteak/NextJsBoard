@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function List() {
   let client = await connectDB;
@@ -18,7 +19,10 @@ export default async function List() {
             className="list-img"
           />
           <div className="list-desc">
-            <h4>{movies[index].title + " (" + movies[index].year + ")"}</h4>
+            <Link href={`detail/${movies[index]._id}`} className="Link">
+              <h4>{movies[index].title + " (" + movies[index].year + ")"}</h4>
+            </Link>
+
             <p>{movies[index].directors[0]}</p>
             <p>
               {movies[index].genres.join(", ") +

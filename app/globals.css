@@ -1,6 +1,13 @@
 body {
   margin: 0;
 }
+.Link {
+  text-decoration: none;
+  color: black;
+}
+.Link :hover {
+  text-decoration: underline;
+}
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;

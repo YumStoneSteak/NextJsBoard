@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js, MongoDB 게시판
 
-## Getting Started
+### 실행 및 빌드 명령어
 
-First, run the development server:
+- 개발 실행 : npm run dev
+- 빌드 : npm run build
+- 빌드파일 실행: npm start
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 기술스택
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 13
+- MongoDB
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Git Commit Convention
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Feat : 새로운 기능 추가
+- Fix : 버그 수정
+- Docs : 문서 수정
+- Style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
+- Refactor : 코드 리펙토링
+- Test : 테스트 코드, 리펙토링 테스트 코드 추가
+- Chore : 빌드 업무 수정, 패키지 매니저 수정
 
-## Learn More
+**Convention Example**
 
-To learn more about Next.js, take a look at the following resources:
+    (Summary)
+    Feat: 리스트 추가
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    (Description)
+    - map을 이용한 리스트 추가
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 디렉토리 구조
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 미정

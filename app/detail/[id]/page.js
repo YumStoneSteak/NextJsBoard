@@ -5,7 +5,7 @@ import DetailLink from "../../list/detailLink";
 
 async function Detail(props) {
   let client = await connectDB;
-  const db = client.db("sample_mflix");
+  const db = client.db("dongflix");
   let movie = await db
     .collection("movies")
     .findOne({ _id: new ObjectId(props.params.id) });

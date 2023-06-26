@@ -5,7 +5,7 @@ export default function DetailLink() {
   return (
     <button
       onClick={() => {
-        router.push("/list");
+        router.push("/");
       }}
     >
       Go List

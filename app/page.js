@@ -6,7 +6,7 @@ import LoadList from "./list/LoadList";
 export default function List() {
   return (
     <div className="list-bg">
-      <LoadList fromIndex={0} toIndex={20}></LoadList>
+      <LoadList fromIndex={0} toIndex={9}></LoadList>
     </div>
   );
 }

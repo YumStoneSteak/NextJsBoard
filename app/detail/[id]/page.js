@@ -1,7 +1,7 @@
 import { connectDB } from "@/util/database";
 import Image from "next/image";
 import { ObjectId } from "mongodb";
-import DetailLink from "../../list/detailLink";
+import Buttons from "@/app/list/Buttons";
 
 async function Detail(props) {
   let client = await connectDB;
@@ -40,7 +40,7 @@ async function Detail(props) {
             </p>
             <br />
             <p>{movie.fullplot}</p>
-            <DetailLink></DetailLink>
+            <Buttons />
           </div>
         </div>
       </div>

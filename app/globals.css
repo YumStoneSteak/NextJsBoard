@@ -2,6 +2,22 @@ body {
   margin: 0;
   background: #000000;
 }
+input {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 15px;
+  margin: 10px 10px 5px 0px;
+  background: rgb(190, 190, 190);
+  border: none;
+  border-radius: 5px;
+}
+.buttons :hover {
+  background: white;
+}
 .main-title {
   color: #e50914;
   text-align: center;
@@ -36,22 +52,6 @@ body {
   color: rgb(190, 190, 190);
   margin: 5px 0px;
 }
-.list-img {
-}
-.list-desc {
-}
 .p-20 {
   padding: 20px;
-}
-input {
-  box-sizing: border-box;
-  padding: 10px;
-  display: block;
-  margin-bottom: 10px;
-}
-button {
-  padding: 10px 15px;
-  background: lightgray;
-  border: none;
-  border-radius: 5px;
 }

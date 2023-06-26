@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,7 +16,15 @@ export default function RootLayout({ children }) {
         <title>DongFlix</title>
         <link rel="icon" href="favico.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        <Link href={"/"} className="Link">
+          <h1 className="main-title">DONGFLIX</h1>
+        </Link>
+        {children}
+        <h5 className="main-title">DONGFLIX</h5>
+        <h5 className="main-title">Made by LDH, 2023</h5>
+      </body>
     </html>
   );
 }

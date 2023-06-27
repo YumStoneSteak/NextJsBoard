@@ -1,26 +1,56 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { connectDB } from "@/util/database";
 
-export default async function LoadList(props) {
-  let client = await connectDB;
-  const db = client.db("dongflix");
-  let movies = await db.collection("movies").find().toArray();
+export default function LoadList(props) {
+  // const [movies, setMovies] = useState([]);
+
+  // useEffect(() => {
+  //   loadData();
+  // }, []);
+
+  // const loadData = async () => {
+  //   const test = await fetch("/api/list").then((r) => {
+  //     return r.json();
+  //   });
+
+  //   setMovies(test);
+  // };
+
+  let movies = props.result;
 
   return (
     <div className="list-bg">
-      {movies.slice(props.fromIndex, props.toIndex).map((item, index) => (
+      {/* .slice(props.fromIndex, props.toIndex) */}
+      {movies.map((item, index) => (
         <div className="list-item" key={index}>
-          <Image
-            src={`${movies[index].poster}`}
-            alt={index}
-            width="100"
-            height="162"
-            className="list-img"
-          />
+          <div class="relative">
+            <div class="overlay-wrap-up">
+              <div class="overlay-black-up">
+                <span
+                  class="overlay-black-span"
+                  onClick={() => alert("Added to Watch List")}
+                >
+                  ❤️
+                </span>
+              </div>
+            </div>
+            <img
+              src={`${movies[index].poster}`}
+              alt={index}
+              width="100"
+              height="162"
+              className="list-img"
+            />
+          </div>
+
           <div className="list-desc">
             {
-              <Link href={`detail/${movies[index]._id}`} className="Link">
+              <Link
+                href={`detail/${movies[index]._id.toString()}`}
+                className="Link"
+              >
                 <h4>{movies[index].title + " (" + movies[index].year + ")"}</h4>
               </Link>
             }

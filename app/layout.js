@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import MainLinks from "./list/mainLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,12 @@ export default function RootLayout({ children }) {
         <Link href={"/"} className="Link">
           <h1 className="main-title">DONGFLIX</h1>
         </Link>
+        <MainLinks />
         {children}
-        <h5 className="main-title">DONGFLIX</h5>
-        <h5 className="main-title">Made by LDH, 2023</h5>
+        <hr />
+        <h5 className="main-footer">
+          Copyright ⓒ 2023 DONGFLIX. All rights reserved.
+        </h5>
       </body>
     </html>
   );

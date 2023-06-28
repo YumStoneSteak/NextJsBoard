@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 import Buttons from "@/app/list/Buttons";
@@ -33,7 +34,7 @@ async function Detail(props) {
             </p>
             <br />
             <p>{movie.fullplot}</p>
-            <Buttons href={movie._id.toString()} />
+            <Buttons id={movie._id.toString()} />
           </div>
         </div>
       </div>

@@ -16,7 +16,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 button {
   padding: 10px 15px;
   margin: 10px 10px 5px 0px;
@@ -32,6 +31,11 @@ button:hover {
   text-align: center;
   margin: 30px;
 }
+.main-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
 
 .main-footer {
   color: white;
@@ -43,7 +47,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 10px;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -88,8 +91,10 @@ button:hover {
   margin: auto;
   margin-bottom: 20px;
 }
-.list-img:hover {
-  background: rgba(0, 0, 0, 0.5); /* 덮어쓸 이미지의 배경색이 될 색상 */
+
+.list-img {
+  width: 141px;
+  height: 200px;
 }
 .list-item h4 {
   color: white;
@@ -129,36 +134,43 @@ button:hover {
   margin-right: auto;
   width: 170px;
 }
+/* 투명도로 에니매이션 만들기 */
 .relative {
   position: relative;
 }
-/* 투명도로 에니매이션 만들기 */
+/* 공중에 띄우기 */
 .overlay {
-  /* 공중에 띄우기 */
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgb(0, 0, 0, 0.3);
+  background: rgb(0, 0, 0, 0.2);
   opacity: 0;
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
 }
 .overlay:hover {
   opacity: 1;
 }
-
-.overlay-wrap-up {
-  /* 공중에 띄우기 */
+.overlay span:hover {
+  cursor: pointer;
+}
+/* 공중에 띄우기 */
+/* .overlay-wrap-right {
   position: absolute;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-.overlay-wrap-up:hover .overlay-black-up {
+.overlay-wrap-right:hover .overlay-black-right {
   margin-left: 0%;
 }
 
-.overlay-black-up {
+.overlay-black-right {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -166,13 +178,31 @@ button:hover {
   margin-left: -100px;
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-delay: 150ms;
+  transition-delay: 100ms;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 24px;
 }
-.overlay-black-up :hover {
+.overlay-black-right :hover {
   cursor: pointer;
+} */
+
+/* 반응형 스타일 */
+/* 데스크탑 화면에 대한 스타일 */
+@media (max-width: 768px) and (max-width: 1024px) {
+  .list-img {
+    width: 106px;
+    height: 150px;
+  }
+  .main-link {
+    width: 170px;
+  }
+}
+/* 데스크탑 화면에 대한 스타일 */
+@media (min-width: 1025px) {
+  .list-item {
+    width: 60%;
+  }
 }

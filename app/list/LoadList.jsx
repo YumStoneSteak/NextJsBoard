@@ -18,29 +18,26 @@ export default function LoadList(props) {
   //   setMovies(test);
   // };
 
-  let movies = props.result;
+  let movies = JSON.parse(props.result);
 
   return (
     <div className="list-bg">
       {/* .slice(props.fromIndex, props.toIndex) */}
       {movies.map((item, index) => (
         <div className="list-item" key={index}>
-          <div class="relative">
-            <div class="overlay-wrap-up">
-              <div class="overlay-black-up">
-                <span
-                  class="overlay-black-span"
-                  onClick={() => alert("Added to Watch List")}
-                >
-                  ❤️
-                </span>
-              </div>
+          <div className="relative">
+            <div className="overlay">
+              <span
+                className="overlay-black-span"
+                onClick={() => alert("Added to Watch List")}
+              >
+                ❤️
+              </span>
             </div>
+
             <img
               src={`${movies[index].poster}`}
               alt={index}
-              width="100"
-              height="162"
               className="list-img"
             />
           </div>

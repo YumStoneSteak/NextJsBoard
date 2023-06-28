@@ -39,7 +39,7 @@ export default function Add() {
                 name="fullplot"
                 rows={4}
                 cols={130}
-                placeholder="Dicribe Plot"
+                placeholder="Describe Plot"
               />
             </p>
             <p>

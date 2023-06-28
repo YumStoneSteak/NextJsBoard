@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import MainLinks from "./list/mainLinks";
+import MainLinks from "./list/MainLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,12 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={inter.className}>
-        <Link href={"/"} className="Link">
-          <h1 className="main-title">DONGFLIX</h1>
-        </Link>
+        <div className="main-logo-container">
+          <Link href={"/"} className="Link">
+            <img src="logo.png" alt="DONGFLIX" className="main-logo" />
+          </Link>
+        </div>
+
         <MainLinks />
         {children}
         <hr />

@@ -6,7 +6,7 @@ export default function Buttons(props) {
     <div className="buttons">
       <button
         onClick={() => {
-          router.push(`/detail/edit/${props.href}`);
+          router.push(`/detail/edit/${props.id}`);
         }}
       >
         Edit
@@ -14,10 +14,12 @@ export default function Buttons(props) {
       <button
         onClick={() => {
           if (window.confirm("Do you really want to Delete Current Info?")) {
+            fetch(`/api/detail/delete/${props.id}`, {
+              method: "DELETE",
+            });
             alert("Current Information Deleted");
-            router.push("/api/detail/delete.js");
+            router.push("/");
           }
-          router.back;
         }}
       >
         Delete
@@ -25,7 +27,7 @@ export default function Buttons(props) {
 
       <button
         onClick={() => {
-          router.push("https://youtu.be/tIxeVuO7TKk");
+          router.push("https://www.youtube.com/watch?v=Zspb26Dngv8&t");
         }}
       >
         Watch Now

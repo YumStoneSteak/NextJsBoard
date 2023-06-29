@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 export default function Buttons(props) {
-  let router = useRouter();
+  const router = useRouter();
   return (
     <div className="buttons">
       <button

@@ -143,7 +143,7 @@ button:hover {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgb(0, 0, 0, 0.2);
+  background: rgb(0, 0, 0, 0.4);
   opacity: 0;
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);

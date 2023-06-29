@@ -46,6 +46,7 @@ export default function LoadList(props) {
             {
               <Link
                 href={`detail/${movies[index]._id.toString()}`}
+                id={`${movies[index]._id.toString()}`}
                 className="Link"
               >
                 <h4>{movies[index].title + " (" + movies[index].year + ")"}</h4>

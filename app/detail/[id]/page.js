@@ -8,7 +8,7 @@ async function Detail(props) {
   const db = client.db("dongflix");
   let movie = await db
     .collection("movies")
-    .findOne({ _id: new ObjectId(props.params.id.toString()) });
+    .findOne({ _id: new ObjectId(props.params.id) });
   return (
     <>
       <div className="list-bg">

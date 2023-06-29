@@ -1,28 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useRouter } from "next/navigation";
+import OnCancelClicked from "../list/OnCancelClicked.jsx";
 
 export default function Add() {
-  const router = useRouter();
-  const onCancelClicked = () => {
-    if (window.confirm("Do you really want to cancel the current info?")) {
-      router.push("/");
-    }
-  };
   const nameArr = ["title", "year", "directors", "genres", "runtime"];
+  const router = useRouter();
 
   return (
     <div className="list-bg">
       <h1>🎞️ Add Movie Info</h1>
       <form action="/api/add" method="POST">
         <div className="list-item">
-          <img
-            src={"/samplePoster.jpg"}
-            alt="poster"
-            width="162"
-            height="261"
-            className="list-img"
-          />
+          <img src={"/samplePoster.jpg"} alt="poster" className="list-img" />
           <div className="list-desc-input">
             {nameArr.map((name) => {
               return (
@@ -55,7 +45,7 @@ export default function Add() {
               </button>
               <button
                 className="buttons"
-                onClick={() => onCancelClicked()}
+                onClick={() => OnCancelClicked(router)}
                 type="button"
               >
                 cancel

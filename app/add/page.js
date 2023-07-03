@@ -12,26 +12,31 @@ export default function Add() {
       <h1>🎞️ Add Movie Info</h1>
       <form action="/api/add" method="POST">
         <div className="list-item">
-          <img src={"/samplePoster.jpg"} alt="poster" className="list-img" />
+          <img
+            src={"/samplePoster.jpg"}
+            alt="poster"
+            className="list-img-big"
+          />
           <div className="list-desc-input">
-            {nameArr.map((name) => {
+            {nameArr.map((name, index) => {
               return (
                 <p key={name}>
                   <label>
-                    <span>{name}:</span>
-                    <input name={name} placeholder={name} />
+                    <span>{name.toUpperCase()}</span>
+                    <input name={name} />
                   </label>
                 </p>
               );
             })}
-            <p>
+            <label class="textarea-container">
               <textarea
                 name="fullplot"
                 rows={4}
                 cols={130}
-                placeholder="Describe Plot"
+                placeholder={"Plot"}
+                className="scrollbar textarea"
               />
-            </p>
+            </label>
             <p>
               <button
                 className="buttons white"
@@ -41,14 +46,14 @@ export default function Add() {
                 Save
               </button>
               <button className="buttons" type="reset">
-                reset
+                Reset
               </button>
               <button
                 className="buttons"
                 onClick={() => OnCancelClicked(router)}
                 type="button"
               >
-                cancel
+                Cancel
               </button>
             </p>
           </div>

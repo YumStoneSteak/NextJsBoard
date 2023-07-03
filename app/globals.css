@@ -7,14 +7,20 @@ input {
   box-sizing: border-box;
   padding: 10px;
   display: block;
-  margin-bottom: 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(190, 190, 190);
+  width: 80%;
 }
 textarea {
-  width: 90%;
-  resize: vertical;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(190, 190, 190);
+  overflow-y: auto;
+  font-family: "Open Sans";
 }
 button {
   padding: 10px 15px;
@@ -26,6 +32,41 @@ button {
 button:hover {
   background: white;
 }
+hr {
+  color: rgb(190, 190, 190);
+}
+h1 {
+  text-align: center;
+}
+.textarea-container {
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar,
+.textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190);
+  border-radius: 50px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: rgb(190, 190, 190);
+}
+
 .main-title {
   color: #e50914;
   text-align: center;
@@ -38,7 +79,7 @@ button:hover {
 }
 
 .main-footer {
-  color: white;
+  color: rgb(190, 190, 190);
   text-align: center;
   margin: 30px;
 }
@@ -88,13 +129,18 @@ button:hover {
   align-items: center;
   gap: 20px;
   width: 90%;
+
   margin: auto;
   margin-bottom: 20px;
 }
 
 .list-img {
-  width: 141px;
-  height: 200px;
+  width: 152px;
+  height: 224px;
+}
+.list-img-big {
+  width: 282px;
+  height: 400px;
 }
 .list-item h4 {
   color: white;
@@ -108,12 +154,10 @@ button:hover {
 .list-item p {
   color: rgb(190, 190, 190);
   margin: 5px 0px;
+  width: 100%;
 }
 .p-20 {
   padding: 20px;
-}
-.textarea-container {
-  width: 100%;
 }
 
 .hidden {
@@ -122,18 +166,23 @@ button:hover {
 .white {
   background: rgb(241, 241, 241);
 }
+.list-desc-input {
+  margin: 5px;
+  width: 90%;
+}
 .list-desc-input label {
   display: inline-flex;
-  margin: auto;
+  margin: 5px;
   width: 100%;
 }
 .list-desc-input span {
-  width: 80px;
+  width: 20%;
+  min-width: 80px;
+  margin: 10px;
+  text-align: center;
+  font-size: 15px;
 }
-.list-desc-input input {
-  margin-right: auto;
-  width: 170px;
-}
+
 /* 투명도로 에니매이션 만들기 */
 .relative {
   position: relative;
@@ -192,12 +241,12 @@ button:hover {
 /* 반응형 스타일 */
 /* 데스크탑 화면에 대한 스타일 */
 @media (max-width: 768px) and (max-width: 1024px) {
-  .list-img {
-    width: 106px;
-    height: 150px;
-  }
   .main-link {
     width: 170px;
+  }
+  .list-img-big {
+    width: 152px;
+    height: 224px;
   }
 }
 /* 데스크탑 화면에 대한 스타일 */

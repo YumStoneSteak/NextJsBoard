@@ -18,7 +18,7 @@ async function Detail(props) {
             alt="poster"
             width="162"
             height="261"
-            className="list-img"
+            className="list-img-big"
           />
           <div className="list-desc">
             <h4>{movie.title}</h4>

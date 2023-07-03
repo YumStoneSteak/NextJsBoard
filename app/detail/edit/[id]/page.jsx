@@ -25,57 +25,49 @@ export default function Edit(props) {
 
   return (
     <div className="list-bg">
-      <h1>수정페이지</h1>
+      <h1>Edit Movie Info</h1>
       <form action="/api/detail/edit" method="POST">
         <div className="list-item">
           <img
             src={`${movie.poster}`}
             alt=" movie poster "
-            width="162"
-            height="261"
-            className="list-img"
+            className="list-img-big"
           />
 
           <div className="list-desc-input">
-            <p>
-              <label>
-                <span>title:</span>
-                <input name="title" defaultValue={movie.title} />
-              </label>
-            </p>
-            <p>
-              <label>
-                <span>year:</span>
-                <input name="year" defaultValue={movie.year} />
-              </label>
-            </p>
-            <p>
-              <label>
-                <span>directors:</span>
-                <input name="directors" defaultValue={movie.directors} />
-              </label>
-            </p>
-            <p>
-              <label>
-                <span>genres:</span>
-                <input name="genres" defaultValue={movie.genres} />
-              </label>
-            </p>
-            <p>
-              <label>
-                <span>runtime:</span>
-                <input name="runtime" defaultValue={movie.runtime} />
-              </label>
-            </p>
+            <label>
+              <span>Title</span>
+              <input name="title" defaultValue={movie.title} />
+            </label>
 
-            <p>
+            <label>
+              <span>Year</span>
+              <input name="year" defaultValue={movie.year} />
+            </label>
+
+            <label>
+              <span>Directors</span>
+              <input name="directors" defaultValue={movie.directors} />
+            </label>
+
+            <label>
+              <span>Genres</span>
+              <input name="genres" defaultValue={movie.genres} />
+            </label>
+
+            <label>
+              <span>Runtime</span>
+              <input name="runtime" defaultValue={movie.runtime} />
+            </label>
+            <label class="textarea-container">
               <textarea
                 name="fullplot"
                 rows={4}
                 cols={130}
                 defaultValue={movie.fullplot}
+                className="scrollbar textarea"
               />
-            </p>
+            </label>
             <input className="hidden" name="id" defaultValue={movie._id} />
             <p>
               <button className="buttons" type="submit">
@@ -85,7 +77,7 @@ export default function Edit(props) {
                 reset
               </button>
               <button
-                className="buttons"
+                className="buttons "
                 onClick={() => OnCancelClicked(router)}
                 type="button"
               >

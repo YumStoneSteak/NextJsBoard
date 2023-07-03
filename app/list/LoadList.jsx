@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function LoadList(props) {
@@ -29,7 +29,7 @@ export default function LoadList(props) {
             <div className="overlay">
               <span
                 className="overlay-black-span"
-                onClick={() => alert("Added to Watch List")}
+                onClick={() => alert("내 마음 속에 저장")}
               >
                 ❤️
               </span>

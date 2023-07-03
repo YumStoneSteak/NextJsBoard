@@ -16,7 +16,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>DongFlix</title>
-        <link rel="icon" href="favico.ico" />
       </head>
 
       <body className={inter.className}>

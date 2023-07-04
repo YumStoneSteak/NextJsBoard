@@ -28,7 +28,7 @@ export default function Add() {
                 </p>
               );
             })}
-            <label class="textarea-container">
+            <label className="textarea-container">
               <textarea
                 name="fullplot"
                 rows={4}

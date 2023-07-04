@@ -59,7 +59,7 @@ export default function Edit(props) {
               <span>Runtime</span>
               <input name="runtime" defaultValue={movie.runtime} />
             </label>
-            <label class="textarea-container">
+            <label className="textarea-container">
               <textarea
                 name="fullplot"
                 rows={4}

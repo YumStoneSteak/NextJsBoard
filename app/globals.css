@@ -35,7 +35,8 @@ button:hover {
 hr {
   color: rgb(190, 190, 190);
 }
-h1 {
+h1,
+h3 {
   text-align: center;
 }
 .textarea-container {
@@ -84,6 +85,7 @@ body::-webkit-scrollbar-track {
   margin: 30px;
 }
 .main-links {
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,6 +106,8 @@ body::-webkit-scrollbar-track {
   border: none;
   border-radius: 20px;
   text-decoration: none;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .main-link:hover {
@@ -126,12 +130,15 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;
   padding: 20px;
   display: flex;
-  align-items: center;
   gap: 20px;
-  width: 90%;
-
+  width: 60%;
   margin: auto;
   margin-bottom: 20px;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.buttons {
+  margin-top: 100px;
 }
 
 .list-img {
@@ -239,19 +246,37 @@ body::-webkit-scrollbar-track {
 } */
 
 /* 반응형 스타일 */
-/* 데스크탑 화면에 대한 스타일 */
-@media (max-width: 768px) and (max-width: 1024px) {
+/* 테블릿 & 작은 데스크톱 */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .main-links {
+    width: 80%;
+  }
   .main-link {
-    width: 170px;
+    width: 180px;
+  }
+  .list-item {
+    width: 80%;
   }
   .list-img-big {
     width: 152px;
     height: 224px;
   }
 }
-/* 데스크탑 화면에 대한 스타일 */
-@media (min-width: 1025px) {
+
+/* 스마트폰 */
+@media screen and (max-width: 575px) {
+  .main-links {
+    width: 95%;
+  }
+  .main-link {
+    margin: 8px;
+    width: 160px;
+  }
   .list-item {
-    width: 60%;
+    width: 90%;
+  }
+  .list-img-big {
+    width: 152px;
+    height: 224px;
   }
 }

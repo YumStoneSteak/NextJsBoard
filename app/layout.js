@@ -45,7 +45,7 @@ export default async function RootLayout({ children }) {
               />
             </Link>
           </div>
-          <h3>{sayHello}</h3>
+          <h3 className="main-sayHello">{sayHello}</h3>
           <MainLinks session={session} />
         </header>
 

@@ -12,13 +12,25 @@ export default function Buttons(props) {
         Edit
       </button>
       <button
-        onClick={() => {
-          if (window.confirm("Do you really want to Delete Current Info?")) {
-            fetch(`/api/detail/delete/${props.id}`, {
-              method: "DELETE",
-            });
-            alert("Current Information Deleted");
-            router.push("/");
+        onClick={async () => {
+          if (
+            window.confirm("Do you really want to delete the current info?")
+          ) {
+            try {
+              const res = await fetch(`/api/detail/delete/${props.id}`, {
+                method: "DELETE",
+              });
+
+              if (res.ok) {
+                router.push("/");
+              } else {
+                const errorMessage = "DeleteNotAuthor";
+                router.push(`/error/?code=${errorMessage}`);
+              }
+            } catch (error) {
+              const errorMessage = "DeleteNotAuthor";
+              router.push(`/error/?code=${errorMessage}`);
+            }
           }
         }}
       >

@@ -9,11 +9,19 @@ export default function MainLinks(props) {
 
   return (
     <div className="main-links">
-      <Link className="main-link" href={"/add"}>
+      <Link
+        className="main-link"
+        href={"/add"}
+        style={{ animationDelay: "10ms" }}
+      >
         🎞️ Add Movie
       </Link>
 
-      <Link className="main-link" href={"/watchList"}>
+      <Link
+        className="main-link"
+        href={"/watchList"}
+        style={{ animationDelay: "60ms" }}
+      >
         ❤️ Watch List
       </Link>
 
@@ -21,6 +29,7 @@ export default function MainLinks(props) {
         <Link
           className="main-link"
           href={""}
+          style={{ animationDelay: "110ms" }}
           onClick={() => {
             signOut();
           }}

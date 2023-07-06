@@ -14,9 +14,8 @@ export default function Edit(props) {
   }, []);
 
   const loadData = async () => {
-    const movieData = await fetch("/api/list", {
-      method: "POST",
-      body: props.params.id,
+    const movieData = await fetch(`/api/list?id=${props.params.id}`, {
+      method: "GET",
     }).then((r) => {
       return r.json();
     });
@@ -69,6 +68,11 @@ export default function Edit(props) {
               />
             </label>
             <input className="hidden" name="id" defaultValue={movie._id} />
+            <input
+              className="hidden"
+              name="author"
+              defaultValue={movie.author}
+            />
             <p>
               <button className="buttons" type="submit">
                 Save

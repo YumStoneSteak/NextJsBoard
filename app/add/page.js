@@ -38,11 +38,7 @@ export default function Add() {
               />
             </label>
             <p>
-              <button
-                className="buttons white"
-                type="submit"
-                onClick={() => alert("Add success")}
-              >
+              <button className="buttons white" type="submit">
                 Save
               </button>
               <button className="buttons" type="reset">

@@ -2,10 +2,10 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 import Buttons from "@/app/list/Buttons";
+import getUserEmail from "@/pages/api/auth/getUserEmail";
 
 async function Detail(props) {
-  let client = await connectDB;
-  const db = client.db("dongflix");
+  const db = (await connectDB).db("dongflix");
   let movie = await db
     .collection("movies")
     .findOne({ _id: new ObjectId(props.params.id) });
@@ -34,6 +34,8 @@ async function Detail(props) {
             </p>
             <br />
             <p>{movie.fullplot}</p>
+            <br />
+            <p>Author: {movie.author || "No Info"}</p>
             <Buttons id={movie._id.toString()} />
           </div>
         </div>

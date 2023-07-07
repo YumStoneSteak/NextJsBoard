@@ -17,11 +17,6 @@ export default function Buttons(props) {
             const res = await fetch(`/api/detail/delete/${props.id}`, {
               method: "DELETE",
             });
-
-            if (res.ok) {
-              alert("글이 삭제되었습니다.");
-              router.push("/");
-            }
           }
         }}
       >

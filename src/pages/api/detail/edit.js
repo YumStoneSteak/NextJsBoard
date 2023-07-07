@@ -25,9 +25,8 @@ export default async function handler(req, res) {
         { _id: new ObjectId(req.body.id.toString()) },
         { $set: newReq }
       );
-    res.redirect(302, "/");
+    return res.redirect(302, `/alert/?result=success&code=EditSuccess`);
   } else {
-    const errorMessage = "guest";
-    res.redirect(302, `/error/?code=${errorMessage}`);
+    return res.redirect(302, `/alert/?result=error&code=guest`);
   }
 }

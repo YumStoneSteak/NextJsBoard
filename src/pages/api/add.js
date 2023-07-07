@@ -1,5 +1,4 @@
-import { connectDB } from "@/util/database";
-import getUserEmail from "./auth/getUserEmail";
+import { connectDB } from "@/src/util/database";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./auth/[...nextauth]";
 

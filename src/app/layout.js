@@ -2,10 +2,10 @@
 import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import MainLinks from "./list/MainLinks";
+import MainLinks from "../components/list/MainLinks";
 import Image from "next/image";
 import Head from "next/head";
-import { authOptions } from "@/pages/api/auth/[...nextauth].js";
+import { authOptions } from "../pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +18,6 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   //login session info
   let session = await getServerSession(authOptions);
-  let userName;
   let sayHello;
   if (session) {
     sayHello = "Welcome " + session.user.name;
@@ -37,7 +36,7 @@ export default async function RootLayout({ children }) {
           <div className="main-logo-container">
             <Link href={"/"} className="Link">
               <Image
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="DONGFLIX"
                 className="main-logo"
                 width={268}

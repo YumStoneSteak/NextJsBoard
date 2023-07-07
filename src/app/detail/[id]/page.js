@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { connectDB } from "@/util/database";
+import { connectDB } from "@/src/util/database";
 import { ObjectId } from "mongodb";
-import Buttons from "@/app/list/Buttons";
-import getUserEmail from "@/pages/api/auth/getUserEmail";
+import Buttons from "@/src/components/list/Buttons";
 
 async function Detail(props) {
   const db = (await connectDB).db("dongflix");

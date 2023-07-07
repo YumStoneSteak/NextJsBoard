@@ -1,19 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useRouter } from "next/navigation";
-import OnCancelClicked from "../list/OnCancelClicked.jsx";
+import OnCancelClicked from "@/src/components/list/OnCancelClicked";
 
 export default function Add() {
   const nameArr = ["title", "year", "directors", "genres", "runtime"];
-  const router = useRouter();
 
   return (
     <div className="list-bg">
       <h1>🎞️ Add Movie Info</h1>
-      <form action="/api/add" method="POST">
+      <form action="\api\add" method="POST">
         <div className="list-item">
           <img
-            src={"/samplePoster.jpg"}
+            src={"images/samplePoster.jpg"}
             alt="poster"
             className="list-img-big"
           />
@@ -46,7 +44,7 @@ export default function Add() {
               </button>
               <button
                 className="buttons"
-                onClick={() => OnCancelClicked(router)}
+                onClick={() => OnCancelClicked()}
                 type="button"
               >
                 Cancel

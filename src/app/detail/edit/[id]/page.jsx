@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import Buttons from "@/app/list/Buttons";
+import Buttons from "@/src/components/list/Buttons";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import OnCancelClicked from "@/app/list/OnCancelClicked";
+import OnCancelClicked from "@/src/components/list/OnCancelClicked";
 
 export default function Edit(props) {
   const [movie, setMovie] = useState([]);

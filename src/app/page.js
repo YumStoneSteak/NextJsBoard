@@ -1,7 +1,7 @@
 import Link from "next/link";
-import LoadList from "./list/LoadList";
-import MainLinks from "./list/MainLinks";
-import { connectDB } from "@/util/database";
+import LoadList from "../components/list/LoadList";
+import MainLinks from "../components/list/MainLinks";
+import { connectDB } from "../util/database";
 
 export default async function List() {
   const db = (await connectDB).db("dongflix");

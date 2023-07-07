@@ -13,23 +13,14 @@ export default function Buttons(props) {
       </button>
       <button
         onClick={async () => {
-          if (
-            window.confirm("Do you really want to delete the current info?")
-          ) {
-            try {
-              const res = await fetch(`/api/detail/delete/${props.id}`, {
-                method: "DELETE",
-              });
+          if (window.confirm("글을 삭제하시겠습니까?")) {
+            const res = await fetch(`/api/detail/delete/${props.id}`, {
+              method: "DELETE",
+            });
 
-              if (res.ok) {
-                router.push("/");
-              } else {
-                const errorMessage = "DeleteNotAuthor";
-                router.push(`/error/?code=${errorMessage}`);
-              }
-            } catch (error) {
-              const errorMessage = "DeleteNotAuthor";
-              router.push(`/error/?code=${errorMessage}`);
+            if (res.ok) {
+              alert("글이 삭제되었습니다.");
+              router.push("/");
             }
           }
         }}

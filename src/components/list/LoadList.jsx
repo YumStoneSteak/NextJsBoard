@@ -5,20 +5,6 @@ import Link from "next/link";
 import { SessionProvider } from "next-auth/react";
 
 export default function LoadList(props) {
-  // const [movies, setMovies] = useState([]);
-
-  // useEffect(() => {
-  //   loadData();
-  // }, []);
-
-  // const loadData = async () => {
-  //   const test = await fetch("/api/list").then((r) => {
-  //     return r.json();
-  //   });
-
-  //   setMovies(test);
-  // };
-
   let movies = JSON.parse(props.result);
 
   return (

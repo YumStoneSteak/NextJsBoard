@@ -1,13 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import MainLinks from "../components/list/MainLinks";
-import Image from "next/image";
-import Head from "next/head";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
-import { getServerSession } from "next-auth";
 
+import "../styles/globals.css";
+import { Inter } from "next/font/google";
+import Head from "next/head";
+import Header from "../components/common/header/header";
+import Footer from "../components/common/footer/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,14 +13,6 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  //login session info
-  let session = await getServerSession(authOptions);
-  let sayHello;
-  if (session) {
-    sayHello = "Welcome " + session.user.name;
-  } else {
-    sayHello = "";
-  }
   return (
     <html lang="en">
       <Head>
@@ -32,27 +21,9 @@ export default async function RootLayout({ children }) {
       </Head>
 
       <body className={inter.className}>
-        <header>
-          <div className="main-logo-container">
-            <Link href={"/"} className="Link">
-              <Image
-                src="/images/logo.png"
-                alt="DONGFLIX"
-                className="main-logo"
-                width={268}
-                height={86}
-              />
-            </Link>
-          </div>
-          <h3 className="main-sayHello">{sayHello}</h3>
-          <MainLinks session={session} />
-        </header>
-
+        <Header />
         {children}
-        <hr />
-        <h5 className="main-footer">
-          Copyright ⓒ 2023 DONGFLIX. All rights reserved.
-        </h5>
+        <Footer />
       </body>
     </html>
   );

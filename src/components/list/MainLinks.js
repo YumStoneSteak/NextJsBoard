@@ -40,11 +40,21 @@ export default function MainLinks(props) {
         <Link
           className="main-link"
           href={""}
+          style={{ animationDelay: "110ms" }}
           onClick={() => {
             signIn();
           }}
         >
           🔒 Log In
+        </Link>
+      )}
+      {!props.session && (
+        <Link
+          className="main-link"
+          href={"/signup"}
+          style={{ animationDelay: "160ms" }}
+        >
+          🔑 Sign Up
         </Link>
       )}
     </div>

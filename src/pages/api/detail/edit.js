@@ -17,8 +17,7 @@ export default async function handler(req, res) {
       runtime: req.body.runtime,
       author: userEmail,
     };
-    let client = await connectDB;
-    const db = client.db("dongflix");
+    const db = (await connectDB).db("dongflix");
     let movie = await db
       .collection("movies")
       .updateOne(

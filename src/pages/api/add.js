@@ -24,6 +24,6 @@ export default async function handler(req, res) {
 
     return res.redirect(302, `/alert/?result=success&code=AddSuccess`);
   } else {
-    res.redirect(302, `/alert/?result=error&code=AddNeedLogin`);
+    return res.redirect(302, `/alert/?result=error&code=AddNeedLogin`);
   }
 }

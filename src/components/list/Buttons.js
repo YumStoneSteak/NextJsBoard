@@ -12,11 +12,12 @@ export default function Buttons(props) {
         Edit
       </button>
       <button
-        onClick={async () => {
+        onClick={() => {
           if (window.confirm("글을 삭제하시겠습니까?")) {
-            const res = await fetch(`/api/detail/delete/${props.id}`, {
-              method: "DELETE",
-            });
+            // const res = await fetch(`/api/detail/delete/${props.id}`, {
+            //   method: "DELETE",
+            // });
+            router.push(`/api/detail/delete/${props.id}`);
           }
         }}
       >

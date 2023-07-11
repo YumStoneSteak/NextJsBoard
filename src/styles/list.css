@@ -1,0 +1,177 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.list-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 66%;
+  min-width: 441px;
+  padding: 10px;
+  margin: auto;
+  color: white;
+}
+
+.list-item-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+}
+
+.list-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #303030;
+  border-radius: 10px;
+  padding: 20px;
+  width: 97.5%;
+  margin: 1.5%;
+  opacity: 0;
+  animation: fade-in 500ms ease-in-out forwards;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list-img {
+  width: 152px;
+  height: 224px;
+}
+
+.list-img-big {
+  width: 282px;
+  height: 400px;
+}
+
+.list-item h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+.list-item h4:hover {
+  color: rgb(190, 190, 190);
+}
+
+.list-item p {
+  margin: 5px 0px;
+  color: rgb(190, 190, 190);
+  width: 100%;
+}
+
+.list-MyComment-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+}
+
+.list-MyComment {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #303030;
+  border-radius: 10px;
+  padding: 20px;
+  width: 98.5%;
+  margin: 1.5%;
+  opacity: 0;
+  animation: fade-in 300ms ease-in-out forwards;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list-MyComment h3 {
+  margin: 5px 0px;
+}
+
+.list-MyComment textarea {
+  height: 56px;
+}
+
+.list-MyComment-btn {
+  margin: auto;
+  height: 56px;
+}
+
+.list-comments-bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  width: 47%;
+  background: #303030;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1.5%;
+  opacity: 0;
+  animation: fade-in 300ms ease-in-out forwards;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list-comments h3 {
+  margin: 0px;
+}
+
+.list-comments textarea {
+  width: 96%;
+  height: 80px;
+  margin: 2%;
+}
+
+.list-comments-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.list-comments-btn {
+  width: 21%;
+  min-height: 52px;
+  margin: 2%;
+}
+
+.list-desc-input {
+  margin: 5px;
+  width: 90%;
+}
+
+.list-desc-input label {
+  display: inline-flex;
+  margin: 5px;
+  width: 100%;
+}
+
+.list-desc-input span {
+  width: 20%;
+  min-width: 80px;
+  margin: 10px;
+  text-align: center;
+  font-size: 15px;
+}

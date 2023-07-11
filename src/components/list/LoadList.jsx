@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-// import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SessionProvider } from "next-auth/react";
 
@@ -10,11 +9,10 @@ export default function LoadList(props) {
   return (
     <SessionProvider>
       <div className="list-bg">
-        {/* .slice(props.fromIndex, props.toIndex) */}
         {movies.map((item, index) => (
           <div
             className="list-item"
-            style={{ animationDelay: `${index * 50}ms` }}
+            style={{ animationDelay: `${index * 100}ms` }}
             key={index}
           >
             <div className="relative">

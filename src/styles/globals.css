@@ -1,19 +1,23 @@
-html,
-header {
-  margin: 0;
+body,
+header,
+html {
   background: #000000;
   color: white;
+  margin: 0px;
 }
+
 input {
-  box-sizing: border-box;
-  padding: 10px;
   display: block;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 10px;
   border: 0;
   border-radius: 5px;
   background-color: rgb(190, 190, 190);
-  width: 80%;
 }
+
 textarea {
+  box-sizing: border-box;
   width: 100%;
   resize: none;
   padding: 10px;
@@ -23,6 +27,7 @@ textarea {
   overflow-y: auto;
   font-family: "Open Sans";
 }
+
 button {
   padding: 10px 15px;
   margin: 10px 10px 5px 0px;
@@ -30,16 +35,20 @@ button {
   border: none;
   border-radius: 5px;
 }
+
 button:hover {
   background: white;
 }
+
 hr {
   color: rgb(190, 190, 190);
 }
+
 h1,
 h3 {
   text-align: center;
 }
+
 .textarea-container {
   width: 250px;
   border-radius: 5px;
@@ -51,7 +60,8 @@ body::-webkit-scrollbar,
   width: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.textarea::-webkit-scrollbar-thumb {
   background: rgb(190, 190, 190);
   border-radius: 50px;
 }
@@ -61,13 +71,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.textarea::-webkit-scrollbar-track {
   background: #303030;
 }
 
 .textarea::-webkit-scrollbar-track {
   background: rgb(190, 190, 190);
 }
+
 @keyframes fade-in-bigger {
   0% {
     opacity: 0;
@@ -88,6 +100,7 @@ body::-webkit-scrollbar-track {
   animation-delay: 600ms;
   transition-delay: 600ms;
 }
+
 .main-sayHello {
   text-align: center;
   opacity: 0;
@@ -97,15 +110,16 @@ body::-webkit-scrollbar-track {
 }
 
 .main-footer {
-  color: rgb(190, 190, 190);
   text-align: center;
+  color: rgb(190, 190, 190);
   margin: 30px;
 }
+
 .main-links {
-  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60%;
   margin: auto;
   color: black;
   text-align: center;
@@ -114,12 +128,14 @@ body::-webkit-scrollbar-track {
 
 .main-link {
   width: 200px;
-  max-width: 100%;
+  max-width: 25%;
   margin: 10px;
   padding: 10px;
   background: white;
   color: black;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 20px;
   text-decoration: none;
@@ -132,93 +148,27 @@ body::-webkit-scrollbar-track {
 .main-link:hover {
   background: rgb(190, 190, 190);
 }
+
 .Link {
   text-decoration: none;
   color: white;
 }
+
 .Link:hover {
   color: rgb(190, 190, 190);
 }
-.list-bg {
-  background: black;
-  padding: 10px;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.list-item {
-  background: #303030;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-  width: 60%;
-  margin: auto;
-  margin-bottom: 20px;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  opacity: 0;
-  animation: fade-in 500ms ease-in-out forwards;
-}
+
 .buttons {
-  margin-top: 100px;
-}
-
-.list-img {
-  width: 152px;
-  height: 224px;
-}
-
-.list-img-big {
-  width: 282px;
-  height: 400px;
-}
-.list-item h4 {
-  color: white;
-  font-size: 20px;
-  font-weight: 800;
-  margin: 0;
-}
-.list-item h4:hover {
-  color: rgb(190, 190, 190);
-}
-.list-item p {
-  color: rgb(190, 190, 190);
-  margin: 5px 0px;
-  width: 100%;
-}
-.p-20 {
-  padding: 20px;
 }
 
 .hidden {
   display: none;
 }
+
 .white {
   background: rgb(241, 241, 241);
 }
-.list-desc-input {
-  margin: 5px;
-  width: 90%;
-}
-.list-desc-input label {
-  display: inline-flex;
-  margin: 5px;
-  width: 100%;
-}
-.list-desc-input span {
-  width: 20%;
-  min-width: 80px;
-  margin: 10px;
-  text-align: center;
-  font-size: 15px;
-}
+
 .login-bg {
   background: #303030;
   color: white;
@@ -228,6 +178,7 @@ body::-webkit-scrollbar-track {
   margin: auto;
   max-width: 500px;
 }
+
 .login-form {
   border-radius: 10px;
   padding: 20px;
@@ -235,34 +186,38 @@ body::-webkit-scrollbar-track {
   margin: auto;
   box-sizing: border-box;
 }
+
 .login-form input {
   margin: auto;
   margin-bottom: 15px;
   width: 100%;
 }
+
 .login-footer {
   display: flex;
   justify-content: space-between;
 }
+
 .login-submit-btn {
   margin: 0px;
   height: 53px;
 }
+
 .login-submit-btn:disabled {
   background-color: rgb(90, 90, 90);
   color: rgb(190, 190, 190);
 }
 
-/* 투명도로 에니매이션 만들기 */
 .relative {
   position: relative;
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 .relative:hover {
   transform: scale(1.05);
 }
-/* 공중에 띄우기 */
+
 .overlay {
   position: absolute;
   height: 100%;
@@ -277,74 +232,11 @@ body::-webkit-scrollbar-track {
   text-align: center;
   font-size: 24px;
 }
+
 .overlay:hover {
   opacity: 1;
 }
+
 .overlay span:hover {
   cursor: pointer;
-}
-/* 공중에 띄우기 */
-/* .overlay-wrap-right {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.overlay-wrap-right:hover .overlay-black-right {
-  margin-left: 0%;
-}
-
-.overlay-black-right {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  margin-left: -100px;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-delay: 100ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 24px;
-}
-.overlay-black-right :hover {
-  cursor: pointer;
-} */
-
-/* 반응형 스타일 */
-/* 테블릿 & 작은 데스크톱 */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-  .main-links {
-    width: 80%;
-  }
-  .main-link {
-    width: 180px;
-  }
-  .list-item {
-    width: 80%;
-  }
-  .list-img-big {
-    width: 152px;
-    height: 224px;
-  }
-}
-
-/* 스마트폰 */
-@media screen and (max-width: 575px) {
-  .main-links {
-    width: 95%;
-  }
-  .main-link {
-    margin: 8px;
-    width: 160px;
-  }
-  .list-item {
-    width: 90%;
-  }
-  .list-img-big {
-    width: 152px;
-    height: 224px;
-  }
 }

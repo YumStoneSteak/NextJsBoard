@@ -9,27 +9,23 @@ export default function Buttons(props) {
           router.push(`/detail/edit/${props.id}`);
         }}
       >
-        Edit
+        📝 Edit
       </button>
       <button
         onClick={() => {
           if (window.confirm("글을 삭제하시겠습니까?")) {
-            // const res = await fetch(`/api/detail/delete/${props.id}`, {
-            //   method: "DELETE",
-            // });
             router.push(`/api/detail/delete/${props.id}`);
           }
         }}
       >
-        Delete
+        🪣 Delete
       </button>
-
       <button
         onClick={() => {
           router.push("https://www.youtube.com/watch?v=Zspb26Dngv8&t");
         }}
       >
-        Watch Now
+        🍿 Watch Now
       </button>
       <button
         onClick={() => {
@@ -37,7 +33,7 @@ export default function Buttons(props) {
           router.back;
         }}
       >
-        Add Watch List
+        ❤️ Add Watch List
       </button>
     </div>
   );

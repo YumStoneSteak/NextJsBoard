@@ -1,0 +1,41 @@
+/* 반응형 스타일 */
+/* 테블릿 & 작은 데스크톱 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-links {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  .main-link {
+    max-width: 170px;
+  }
+  .list-bg {
+    width: 80%;
+  }
+  .list-img-big {
+    width: 152px;
+    height: 224px;
+  }
+}
+
+/* 스마트폰 */
+@media screen and (max-width: 767px) {
+  .main-links {
+    width: 90%;
+  }
+  .main-link {
+    width: 160px;
+    height: 40px;
+    border-radius: 40px;
+  }
+  .list-bg {
+    width: 90%;
+  }
+  .list-comments {
+    width: 97%;
+  }
+
+  .list-img-big {
+    width: 152px;
+    height: 224px;
+  }
+}

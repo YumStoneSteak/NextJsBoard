@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import "../styles/globals.css";
+import "../styles/list.css";
+import "../styles/responsive.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Header from "../components/common/header/header";

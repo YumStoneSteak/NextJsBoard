@@ -1,12 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
-export default function Buttons(props) {
+export default function Buttons({ movieId }) {
   const router = useRouter();
   return (
     <div className="buttons">
       <button
         onClick={() => {
-          router.push(`/detail/edit/${props.id}`);
+          router.push(`/detail/edit/${movieId}`);
         }}
       >
         📝 Edit
@@ -14,7 +14,7 @@ export default function Buttons(props) {
       <button
         onClick={() => {
           if (window.confirm("글을 삭제하시겠습니까?")) {
-            router.push(`/api/detail/delete/${props.id}`);
+            router.push(`/api/detail/delete/${movieId}`);
           }
         }}
       >

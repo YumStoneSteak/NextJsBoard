@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import MainLinks from "../../list/MainLinks";
+import MainLinks from "../MainLinks";
 import { authOptions } from "@/src/pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth";
 export default async function Header() {

@@ -15,6 +15,7 @@ export default function Error(props) {
     SignUpSuccess: "회원가입되었습니다.",
     SignUpTermError: "조건에 맞추어 정보를 입력해주세요",
     SignUpError: "회원가입에 실패했습니다.",
+    CmtError: "코맨트트 저장에 실패했습니다.",
     guest: "로그인 후 사용할 수 있습니다.",
   };
 

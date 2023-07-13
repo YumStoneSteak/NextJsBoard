@@ -2,14 +2,14 @@
 import { connectDB } from "@/src/util/database";
 import { ObjectId } from "mongodb";
 import Buttons from "@/src/components/list/Buttons";
-import MyComment from "@/src/pages/api/detail/MyComment";
-import Comments from "@/src/pages/api/detail/Comments";
+import Comment from "@/src/components/detail/Comment";
 
 async function Detail(props) {
   const db = (await connectDB).db("dongflix");
+  let movieId = props.params.id;
   let movie = await db
     .collection("movies")
-    .findOne({ _id: new ObjectId(props.params.id) });
+    .findOne({ _id: new ObjectId(movieId) });
   return (
     <>
       <div className="list-bg">
@@ -38,12 +38,11 @@ async function Detail(props) {
               <p>{movie.fullplot}</p>
               <br />
               <p>Author: {movie.author || "No Info"}</p>
-              <Buttons id={movie._id.toString()} />
+              <Buttons movieId={movieId} />
             </div>
           </div>
         </div>
-        <MyComment />
-        <Comments />
+        <Comment movieId={movieId} />
       </div>
     </>
   );

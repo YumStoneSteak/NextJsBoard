@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LoadList from "../components/list/LoadList";
-import MainLinks from "../components/list/MainLinks";
+import MainLinks from "../components/common/MainLinks";
 import { connectDB } from "../util/database";
 
 export default async function List() {

@@ -158,9 +158,6 @@ body::-webkit-scrollbar-track,
   color: rgb(190, 190, 190);
 }
 
-.buttons {
-}
-
 .hidden {
   display: none;
 }
@@ -203,7 +200,7 @@ body::-webkit-scrollbar-track,
   height: 53px;
 }
 
-.login-submit-btn:disabled {
+.disabled {
   background-color: rgb(90, 90, 90);
   color: rgb(190, 190, 190);
 }

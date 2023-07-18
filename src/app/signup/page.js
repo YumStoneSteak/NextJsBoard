@@ -64,7 +64,7 @@ export default function Register() {
             <p className="errorMessage">{errorMessage}</p>
             <button
               type="submit"
-              className={`login-submit-btn ${!comment ? "disabled" : ""}`}
+              className={`login-submit-btn ${errorMessage ? "disabled" : ""}`}
               disabled={errorMessage}
             >
               회원가입

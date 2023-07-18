@@ -1,6 +1,5 @@
 import { MongoClient } from "mongodb";
-const url =
-  "mongodb+srv://leedonghyuk2163:z147896321@board.9pxe9rf.mongodb.net/dongflix?retryWrites=true&w=majority";
+const url = process.env.mongoDbURL;
 const options = { useNewUrlParser: true };
 let connectDB;
 

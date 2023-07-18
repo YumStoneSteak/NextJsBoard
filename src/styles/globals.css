@@ -1,9 +1,11 @@
-body,
-header,
-html {
+html,
+body {
   background: #000000;
   color: white;
-  margin: 0px;
+  margin: 0;
+}
+body {
+  overflow-y: scroll;
 }
 
 input {
@@ -58,26 +60,31 @@ h3 {
 body::-webkit-scrollbar,
 .textarea::-webkit-scrollbar {
   width: 10px;
+  overflow: scroll;
 }
 
 body::-webkit-scrollbar-thumb,
 .textarea::-webkit-scrollbar-thumb {
   background: rgb(190, 190, 190);
   border-radius: 50px;
+  overflow: scroll;
 }
 
 .textarea::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 50px;
+  overflow: scroll;
 }
 
 body::-webkit-scrollbar-track,
 .textarea::-webkit-scrollbar-track {
   background: #303030;
+  overflow: scroll;
 }
 
 .textarea::-webkit-scrollbar-track {
   background: rgb(190, 190, 190);
+  overflow: scroll;
 }
 
 @keyframes fade-in-bigger {
@@ -94,6 +101,7 @@ body::-webkit-scrollbar-track,
 .main-logo-container {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin: 20px 0px;
   opacity: 0;
   animation: fade-in-bigger 1000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;

@@ -1,5 +1,4 @@
 import { connectDB } from "@/src/util/database";
-import { getServerSession } from "next-auth";
 import { authOptions } from "./[...nextauth]";
 import bcrypt from "bcrypt";
 

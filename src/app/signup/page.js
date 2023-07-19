@@ -38,7 +38,7 @@ export default function Register() {
     <div>
       <h1>회원가입</h1>
       <div className="login-bg">
-        <form method="POST" action="/api/auth/signup" className="login-form">
+        <form method="POST" action="/api/auth/signUp" className="login-form">
           <input
             name="name"
             type="text"

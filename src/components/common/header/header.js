@@ -26,6 +26,7 @@ export default async function Header() {
         </Link>
       </div>
       <h3 className="main-sayHello">{sayHello}</h3>
+      <h3 className="main-sayHello">Here Your Today's Pick!</h3>
       <MainLinks session={session} />
     </header>
   );

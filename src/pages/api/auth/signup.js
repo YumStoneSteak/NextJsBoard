@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     ) {
       const hashPw = await bcrypt.hash(req.body.password, 10);
       req.body.password = hashPw;
-      const db = (await connectDB).db("dongflix");
+      const db = (await connectDB).db(process.env.AUTH_DB);
       db.collection("user_cred").insertOne(req.body);
       return res.redirect(302, `/alert/?result=success&code=SignUpSuccess`);
     } else {

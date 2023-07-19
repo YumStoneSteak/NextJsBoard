@@ -12,7 +12,7 @@ export default function MainLinks(props) {
       <Link
         className="main-link"
         href={"/add"}
-        style={{ animationDelay: "10ms" }}
+        style={{ animationDelay: "0ms" }}
       >
         🎞️ Add Movie
       </Link>
@@ -20,7 +20,7 @@ export default function MainLinks(props) {
       <Link
         className="main-link"
         href={"/watchList"}
-        style={{ animationDelay: "60ms" }}
+        style={{ animationDelay: "100ms" }}
       >
         ❤️ Watch List
       </Link>
@@ -29,7 +29,7 @@ export default function MainLinks(props) {
         <Link
           className="main-link"
           href={""}
-          style={{ animationDelay: "110ms" }}
+          style={{ animationDelay: "200ms" }}
           onClick={() => {
             signOut();
           }}
@@ -40,7 +40,7 @@ export default function MainLinks(props) {
         <Link
           className="main-link"
           href={""}
-          style={{ animationDelay: "110ms" }}
+          style={{ animationDelay: "300ms" }}
           onClick={() => {
             signIn();
           }}
@@ -51,8 +51,8 @@ export default function MainLinks(props) {
       {!props.session && (
         <Link
           className="main-link"
-          href={"/signup"}
-          style={{ animationDelay: "160ms" }}
+          href={"/signUp"}
+          style={{ animationDelay: "400ms" }}
         >
           🔑 Sign Up
         </Link>

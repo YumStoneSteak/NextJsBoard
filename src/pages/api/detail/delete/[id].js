@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   // && req.method === "DELETE"
   if (session) {
     const userEmail = session.user.email;
-    const db = (await connectDB).db("dongflix");
+    const db = (await connectDB).db(process.env.MOVIE_DB);
     let movie = await db
       .collection("movies")
       .findOne({ _id: new ObjectId(req.query.id) });

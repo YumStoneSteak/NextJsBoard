@@ -27,7 +27,7 @@ export default function LoadList(props) {
         {newMovies.map((movie, index) => (
           <div
             className="list-item"
-            style={{ animationDelay: `${index * 20}ms` }}
+            style={{ animationDelay: `${index * 100}ms` }}
             key={index}
           >
             <div className="relative">
@@ -50,18 +50,12 @@ export default function LoadList(props) {
             </div>
 
             <div className="list-desc">
-              <Link href={"/detail/" + movie.id} className="Link">
-                <h4>{movie.title + " (" + movie.year + ")"}</h4>
+              <Link href={`/detail/${movie.id}`} className="Link">
+                <h4>{`${movie.title} (${movie.year})`}</h4>
               </Link>
 
               <p>{movie.directors[0]}</p>
-              <p>
-                {movie.genreList +
-                  " | " +
-                  movie.runtime +
-                  " mins | " +
-                  movie.rated}
-              </p>
+              <p>{`${movie.genreList} | ${movie.runtime} mins | ${movie.rated}`}</p>
               <p>{movie.plot}</p>
             </div>
           </div>

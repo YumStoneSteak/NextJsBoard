@@ -104,17 +104,16 @@ body::-webkit-scrollbar-track,
   width: 100%;
   margin: 20px 0px;
   opacity: 0;
-  animation: fade-in-bigger 1000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-in-bigger 3500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 600ms;
-  transition-delay: 600ms;
 }
 
 .main-sayHello {
+  background: #000000;
   text-align: center;
   opacity: 0;
   animation: fade-in-bigger 1000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 600ms;
-  transition-delay: 1000ms;
+  animation-delay: 500ms;
 }
 
 .main-footer {
@@ -150,7 +149,7 @@ body::-webkit-scrollbar-track,
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   opacity: 0;
-  animation: fade-in-bigger 900ms ease-in-out forwards;
+  animation: fade-in-bigger 800ms ease-in-out forwards;
 }
 
 .main-link:hover {

@@ -5,19 +5,19 @@ import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(req, res) {
   const session = await getServerSession(req, res, authOptions);
-  if (session && req.method == "POST") {
+  const { genres, title, directors, year, runtime } = req.body;
+
+  if (session && req.method == "PUT") {
     const userEmail = session.user.email;
     const newReq = {
-      genres: [req.body.genres],
-      title: req.body.title,
-      directors: [req.body.directors],
-      title: req.body.title,
-      year: req.body.year,
-      directors: [req.body.directors],
-      runtime: req.body.runtime,
+      genres: [genres],
+      title,
+      directors: [directors],
+      year,
+      runtime,
       author: userEmail,
     };
-    const db = (await connectDB).db("dongflix");
+    const db = (await connectDB).db(process.env.MOVIE_DB);
     let movie = await db
       .collection("movies")
       .updateOne(

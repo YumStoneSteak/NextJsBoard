@@ -15,7 +15,7 @@ export default function Edit(props) {
 
   const loadData = async () => {
     const movieData = await fetch(`/api/loadInfo?id=${props.params.id}`, {
-      method: "GET",
+      method: "PUT",
     }).then((r) => {
       return r.json();
     });

@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       author: userEmail,
     };
 
-    const db = (await connectDB).db("dongflix");
+    const db = (await connectDB).db(process.env.MOVIE_DB);
     let movies = db.collection("movies").insertOne(newReq);
 
     return res.redirect(302, `/alert/?result=success&code=AddSuccess`);

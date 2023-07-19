@@ -7,13 +7,14 @@ export default function Comment({ movieId }) {
   const [AllComments, setAllComments] = useState([]);
 
   const fetchMyComment = async () => {
-    await fetch("/api/detail/myComment", {
+    await fetch("/api/comment/myComment", {
       method: "POST",
       body: JSON.stringify({
-        comment: MyComment,
-        writerName: "",
-        writerEmail: "",
-        parentMovieId: movieId,
+        name: "",
+        email: "",
+        movie_id: movieId,
+        text: MyComment,
+        date: "",
       }),
     })
       .then(() => {
@@ -29,7 +30,7 @@ export default function Comment({ movieId }) {
   };
 
   const fetchAllComments = () => {
-    fetch(`/api/detail/allComments?movieId=${movieId}`)
+    fetch(`/api/comment/allComments?movieId=${movieId}`)
       .then((response) => response.json())
       .then((data) => setAllComments(JSON.parse(data)))
       .catch((error) => {
@@ -68,13 +69,14 @@ export default function Comment({ movieId }) {
           AllComments.reverse().map((data, index) => (
             <div
               className="list-comments"
-              key={data.writerEmail}
-              style={{ animationDelay: `${index * 100}ms` }}
+              key={data.email}
+              style={{ animationDelay: `${index * 20}ms` }}
             >
-              <h3>{data.writerName}</h3>
+              <h3>{data.name}</h3>
+              <small>{data.date.substr(0, 10)}</small>
               <textarea
                 className="textarea"
-                defaultValue={data.comment}
+                defaultValue={data.text}
                 readOnly
               />
               <div className="list-comments-btns">

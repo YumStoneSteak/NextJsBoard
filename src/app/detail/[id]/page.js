@@ -6,7 +6,7 @@ import Comment from "@/src/components/detail/Comment";
 import Image from "next/image";
 
 async function Detail(props) {
-  const db = (await connectDB).db("dongflix");
+  const db = (await connectDB).db(process.env.MOVIE_DB);
   let movieId = props.params.id;
   let movie = await db
     .collection("movies")
@@ -17,8 +17,8 @@ async function Detail(props) {
       <div className="list-item-bg">
         <div className="list-item">
           <Image
-            src={`${movie.poster}`}
-            alt="poster"
+            src={movie.poster}
+            alt="no img"
             width="162"
             height="261"
             className="list-img-big"

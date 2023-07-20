@@ -1,14 +1,15 @@
 "use client";
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { SessionProvider } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function LoadList(props) {
-  const movies = JSON.parse(props.result);
+  const [newMovies, setNewMovies] = useState([]);
 
-  const newMovies = movies.map((movie, index) => {
-    return {
+  useLayoutEffect(() => {
+    const movies = JSON.parse(props.result);
+    const updatedMovies = movies.map((movie, index) => ({
       id: movie._id.toString(),
       poster: movie.poster,
       title: movie.title,
@@ -18,8 +19,9 @@ export default function LoadList(props) {
       runtime: movie.runtime,
       rated: movie.rated,
       plot: movie.plot,
-    };
-  });
+    }));
+    setNewMovies(updatedMovies);
+  }, []);
 
   return (
     <SessionProvider>

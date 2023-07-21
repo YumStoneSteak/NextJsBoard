@@ -27,46 +27,67 @@ export default function LoadList(props) {
     <SessionProvider>
       <div className="list-bg">
         {newMovies.map((movie, index) => (
-          <div
-            className="list-item"
-            style={{ animationDelay: `${index * 20}ms` }}
-            key={index}
-          >
-            <div className="relative">
-              <div className="overlay">
-                <span
-                  className="overlay-black-span"
-                  onClick={() => alert("내 마음 속에 저장")}
-                >
-                  ❤️
-                </span>
+          <>
+            <div
+              className="list-item-blur"
+              key={index}
+              style={{
+                animationDelay: `${index * 20}ms`,
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url(${movie.poster})`,
+                backgroundSize: "cover",
+                filter: "blur(5px)",
+                zIndex: "-1",
+              }}
+            />
+            <div
+              className="list-item"
+              key={index}
+              style={{
+                animationDelay: `${index * 20}ms`,
+              }}
+            >
+              <div className="relative">
+                <div className="overlay">
+                  <span
+                    className="overlay-black-span"
+                    onClick={() => alert("내 마음 속에 저장")}
+                    style={{ zIndex: "1" }}
+                  >
+                    ❤️
+                  </span>
+                </div>
+
+                <Image
+                  src={movie.poster}
+                  width={152}
+                  height={224}
+                  alt={index}
+                  className="list-img"
+                />
               </div>
 
-              <Image
-                src={movie.poster}
-                width={152}
-                height={224}
-                alt={index}
-                className="list-img"
-              />
-            </div>
+              <div className="list-desc">
+                <Link href={"/detail/" + movie.id} className="Link">
+                  <h4>{movie.title + " (" + movie.year + ")"}</h4>
+                </Link>
 
-            <div className="list-desc">
-              <Link href={"/detail/" + movie.id} className="Link">
-                <h4>{movie.title + " (" + movie.year + ")"}</h4>
-              </Link>
-
-              <p>{movie.directors[0]}</p>
-              <p>
-                {movie.genreList +
-                  " | " +
-                  movie.runtime +
-                  " mins | " +
-                  movie.rated}
-              </p>
-              <p>{movie.plot}</p>
+                <p>{movie.directors[0]}</p>
+                <p>
+                  {movie.genreList +
+                    " | " +
+                    movie.runtime +
+                    " mins | " +
+                    movie.rated}
+                </p>
+                <p>{movie.plot}</p>
+              </div>
             </div>
-          </div>
+          </>
         ))}
       </div>
     </SessionProvider>

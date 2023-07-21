@@ -14,7 +14,8 @@ export default function MainLinks(props) {
         href={"/add"}
         style={{ animationDelay: "0ms" }}
       >
-        🎞️ Add Movie
+        <div>🎞️</div>
+        <div>Add Info</div>
       </Link>
 
       <Link
@@ -22,7 +23,8 @@ export default function MainLinks(props) {
         href={"/watchList"}
         style={{ animationDelay: "100ms" }}
       >
-        ❤️ Watch List
+        <div>❤️</div>
+        <div>My List</div>
       </Link>
 
       {props.session ? (
@@ -34,7 +36,8 @@ export default function MainLinks(props) {
             signOut();
           }}
         >
-          🔓 Log Out
+          <div>🔓</div>
+          <div>Log Out</div>
         </Link>
       ) : (
         <Link
@@ -45,7 +48,8 @@ export default function MainLinks(props) {
             signIn();
           }}
         >
-          🔒 Log In
+          <div>🔒</div>
+          <div>Log In</div>
         </Link>
       )}
       {!props.session && (
@@ -54,7 +58,8 @@ export default function MainLinks(props) {
           href={"/signUp"}
           style={{ animationDelay: "400ms" }}
         >
-          🔑 Sign Up
+          <div>🔑</div>
+          <div>Sign Up</div>
         </Link>
       )}
     </div>

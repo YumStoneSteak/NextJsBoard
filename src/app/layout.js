@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import "../styles/normalize.css";
 import "../styles/globals.css";
 import "../styles/list.css";
 import "../styles/responsive.css";

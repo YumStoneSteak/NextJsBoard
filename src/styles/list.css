@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: center;
   width: 66%;
-  min-width: 441px;
   padding: 10px;
   margin: auto;
   color: white;
@@ -31,7 +30,8 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  background: #303030;
+  justify-content: center;
+  /* background: #303030; */
   border-radius: 10px;
   padding: 20px;
   width: 98%;
@@ -48,6 +48,7 @@
 }
 
 .list-img-big {
+  margin-bottom: auto;
   width: 282px;
   height: 400px;
 }
@@ -157,6 +158,15 @@
   margin: 2%;
 }
 
+.list-desc {
+  width: 70%;
+  margin: auto;
+}
+.list-desc h4 {
+  font-size: 22px;
+}
+.list-desc p {
+}
 .list-desc-input {
   margin: 5px;
   width: 90%;

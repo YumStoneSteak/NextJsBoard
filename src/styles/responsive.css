@@ -1,39 +1,60 @@
 /* 반응형 스타일 */
-/* 테블릿 & 작은 데스크톱 */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .main-links {
-    width: 80%;
-    font-size: 0.9rem;
-  }
-  .main-link {
-    max-width: 170px;
-  }
+/* 작은 화면 */
+@media screen and (max-width: 1024px) {
   .list-bg {
     width: 80%;
   }
-  .list-img-big {
-    width: 152px;
-    height: 224px;
-  }
-}
-
-/* 스마트폰 */
-@media screen and (max-width: 767px) {
   .main-links {
-    width: 90%;
+    width: 75%;
   }
   .main-link {
-    width: 160px;
-    height: 40px;
+    height: 60px;
     border-radius: 40px;
   }
+}
+/* 모바일 */
+@media screen and (max-width: 768px) {
+  h3 h4 {
+    font-size: 17px;
+  }
+  .main-greeting {
+    width: 95%;
+    margin: 15px auto;
+    font-size: medium;
+  }
+  .main-links,
+  .login-bg {
+    width: 95%;
+  }
+  .main-link {
+    flex-direction: column;
+    font-size: 14px;
+    margin: 5px;
+    height: 60px;
+    border-radius: 10px;
+  }
+  .main-link :first-child {
+    margin-right: 0;
+    margin-bottom: auto;
+  }
   .list-bg {
-    width: 90%;
+    width: 100%;
   }
   .list-comments {
     width: 97%;
   }
-
+  .list-desc {
+    width: 90%;
+  }
+  .list-item {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px 0px;
+  }
+  .list-img {
+    width: 120px;
+    height: 180px;
+  }
   .list-img-big {
     width: 152px;
     height: 224px;
